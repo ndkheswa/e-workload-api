@@ -15,7 +15,15 @@ import java.time.Period;
 public class Client {
 
     private enum Gender {
-        M, F
+        MALE, FEMALE, OTHER
+    }
+
+    private enum Occupation {
+        STUDENT, SCHOLAR, SALARIED_EMPLOYEE, SELF_EMPLOYED, BUSINESS_OWNER, UNEMPLOYED
+    }
+
+    private enum MaritalStatus {
+        SINGLE, MARRIED
     }
 
     @Id
@@ -28,11 +36,21 @@ public class Client {
     @NotNull
     private String lastName;
 
+    private String email;
+
+    private String phone;
+
+    @NotNull
+    private Occupation occupation;
+
     @NotNull
     private Gender gender;
 
     @NotNull
     private LocalDate birthDate;
+
+    @NotNull
+    private String maritalStatus;
 
     private int age;
 

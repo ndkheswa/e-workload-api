@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost/workloaddb
     username: ${PG_USER}
-    password: ${PG_PASSWORD}
+    password: ${PG_PASSWD}
 
   jpa:
     properties:
