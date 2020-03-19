@@ -1,5 +1,6 @@
 package com.example.eworkloadapi.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import com.example.eworkloadapi.exception.BadResourceException;
 import com.example.eworkloadapi.exception.ResourceAlreadyExists;
 import com.example.eworkloadapi.model.Client;

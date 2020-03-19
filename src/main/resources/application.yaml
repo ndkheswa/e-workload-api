@@ -16,3 +16,7 @@ server:
   error:
     whitelabel:
       enabled: false
+
+auth0:
+  issuer: ${ISSUER}
+  apiAudience: ${AUDIENCE}
