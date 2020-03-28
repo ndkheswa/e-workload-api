@@ -47,7 +47,7 @@ public class ClientController {
     public ResponseEntity<Client> addClient(@Valid @RequestBody Client client) throws URISyntaxException {
         try {
             Client newClient = clientService.save(client);
-            return ResponseEntity.created(new URI("/api/v1/clients" + newClient.getId()))
+            return ResponseEntity.created(new URI("/api/v1/clients/" + newClient.getId()))
                     .body(client);
         } catch (ResourceAlreadyExists ex) {
             logger.error(ex.getMessage());
