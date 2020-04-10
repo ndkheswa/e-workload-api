@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/workloaddb
+    username: workloaddb
+    password: 9803843@ZZa
+  profiles:
+    active: dev
+
+  jpa:
+    properties:
+      hibernate: org.hibernate.dialect.PostgreSQL82Dialect
+      jdbc:
+        lob:
+          non_contextual_creation: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
+
+auth0:
+  audience: ${AUDIENCE}
+  issuer: ${ISSUER}
+
+logging:
+  level:
+    ROOT: TRACE
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
