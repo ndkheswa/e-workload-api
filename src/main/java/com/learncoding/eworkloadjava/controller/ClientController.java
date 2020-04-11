@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.List;
-
 
 @RestController
 @RequestMapping("/api/v1")
@@ -35,8 +33,7 @@ public class ClientController {
     @GetMapping(value = "/clients", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Page<Client>> findAll(
         @RequestParam(value = "page", defaultValue = "1") int pageNumber,
-        @RequestParam(required = false) String lastName
-    ) {
+        @RequestParam(required = false) String lastName) {
         if (StringUtils.isEmpty(lastName)) {
             return ResponseEntity.ok(clientService.findAll(pageNumber, ROWS_PER_PAGE));
         } else {

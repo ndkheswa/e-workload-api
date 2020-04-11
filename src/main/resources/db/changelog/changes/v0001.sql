@@ -13,16 +13,20 @@ create table if not exists client (
       occupation varchar(100) not null,
       gender varchar(100) not null,
       birthDate timestamp without time zone not null,
+      created_at timestamp without time zone,
+      updated_at timestamp without time zone,
       age int not null,
       primary key (id)
 );
 
 create table if not exists booking (
      id bigserial not null,
-     comment pg_largeobject not null,
+     title varchar(100) not null,
+     comment varchar(500) not null,
+     bookingDate timestamp without time zone not null,
      client_id bigserial not null,
-     createdAt timestamp without time zone,
-     updatedAt timestamp without time zone,
+     created_at timestamp without time zone,
+     updated_at timestamp without time zone,
      primary key (id),
      foreign key (client_id) references client(id)
 );

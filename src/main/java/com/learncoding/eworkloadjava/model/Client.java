@@ -5,16 +5,19 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
-public class Client {
+public class Client extends AuditModel implements Serializable {
 
-    //private static final long serialVersionUID = 6044598961665546255L;
+    private static final long serialVersionUID = 6044598961665546255L;
 
     public Client() { }
 
@@ -47,6 +50,11 @@ public class Client {
 
     @NotNull
     private int age;
+
+    @OneToMany(cascade = CascadeType.ALL,
+                fetch = FetchType.LAZY,
+                mappedBy = "client")
+    private Set<Booking> bookings = new HashSet<>();
 
     public void setAge(Date birthDate) { this.age = calculateAge(birthDate); }
 
