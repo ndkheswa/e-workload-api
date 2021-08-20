@@ -1,14 +1,13 @@
-package com.example.eworkloadapi.model;
+package com.learncoding.eworkloadapi.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.ZoneId;
+import java.util.Date;
 
 @Data
 @Entity
@@ -31,9 +30,11 @@ public class Client {
     private Long id;
 
     @NotNull
+    @Column(name = "firstname")
     private String firstName;
 
     @NotNull
+    @Column(name = "lastname")
     private String lastName;
 
     private String email;
@@ -41,28 +42,32 @@ public class Client {
     private String phone;
 
     @NotNull
-    private Occupation occupation;
+    private String occupation;
 
     @NotNull
-    private Gender gender;
+    private String gender;
 
     @NotNull
-    private LocalDate birthDate;
+    @Column(name = "birthdate")
+    private Date birthDate;
 
     @NotNull
+    @Column(name = "maritalstatus")
     private String maritalStatus;
 
     private int age;
 
-    public void setAge(LocalDate birthDate, LocalDate currentDate) {
-        this.age = calculateAge(birthDate, currentDate);
+    public void setAge(Date birthDate) {
+        this.age = calculateAge(birthDate);
     }
 
-    private int calculateAge(LocalDate birthDate, LocalDate currentDate) {
-        if (birthDate != null && currentDate != null) {
-            return Period.between(birthDate, currentDate).getYears();
-        } else {
-            return 0;
-        }
+    private LocalDate convertToLocalDate(Date date) {
+        return date.toInstant()
+                .atZone(ZoneId.systemDefault())
+                .toLocalDate();
+    }
+
+    private int calculateAge(Date birthDate) {
+        return birthDate != null ? Period.between(this.convertToLocalDate(birthDate), LocalDate.now()).getYears() : 0;
     }
 }

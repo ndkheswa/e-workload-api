@@ -1,4 +1,4 @@
-package com.example.eworkloadapi.model;
+package com.learncoding.eworkloadapi.model;
 
 import lombok.Data;
 import org.hibernate.annotations.NaturalId;

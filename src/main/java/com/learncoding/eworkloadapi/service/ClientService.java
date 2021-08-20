@@ -1,11 +1,11 @@
-package com.example.eworkloadapi.service;
+package com.learncoding.eworkloadapi.service;
 
-import com.example.eworkloadapi.model.Client;
-import com.example.eworkloadapi.repository.ClientRepository;
-import com.example.eworkloadapi.exception.BadResourceException;
-import com.example.eworkloadapi.exception.ResourceAlreadyExists;
-import com.example.eworkloadapi.exception.ResourceNotFoundException;
-import com.example.eworkloadapi.specification.ClientSpecification;
+import com.learncoding.eworkloadapi.model.Client;
+import com.learncoding.eworkloadapi.repository.ClientRepository;
+import com.learncoding.eworkloadapi.exception.BadResourceException;
+import com.learncoding.eworkloadapi.exception.ResourceAlreadyExists;
+import com.learncoding.eworkloadapi.exception.ResourceNotFoundException;
+import com.learncoding.eworkloadapi.specification.ClientSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.querydsl.QPageRequest;

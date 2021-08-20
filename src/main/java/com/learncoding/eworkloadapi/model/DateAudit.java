@@ -1,4 +1,4 @@
-package com.example.eworkloadapi.model;
+package com.learncoding.eworkloadapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

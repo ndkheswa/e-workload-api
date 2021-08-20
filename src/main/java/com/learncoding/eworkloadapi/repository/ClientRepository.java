@@ -1,6 +1,6 @@
-package com.example.eworkloadapi.repository;
+package com.learncoding.eworkloadapi.repository;
 
-import com.example.eworkloadapi.model.Client;
+import com.learncoding.eworkloadapi.model.Client;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.PagingAndSortingRepository;
 

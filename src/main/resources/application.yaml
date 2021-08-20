@@ -20,3 +20,5 @@ server:
 auth0:
   issuer: ${ISSUER}
   apiAudience: ${AUDIENCE}
+
+liquibase: update

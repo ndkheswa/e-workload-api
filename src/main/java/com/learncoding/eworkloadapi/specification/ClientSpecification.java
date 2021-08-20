@@ -1,6 +1,6 @@
-package com.example.eworkloadapi.specification;
+package com.learncoding.eworkloadapi.specification;
 
-import com.example.eworkloadapi.model.Client;
+import com.learncoding.eworkloadapi.model.Client;
 import org.springframework.data.jpa.domain.Specification;
 
 import javax.persistence.criteria.CriteriaBuilder;

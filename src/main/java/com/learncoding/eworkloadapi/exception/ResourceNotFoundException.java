@@ -1,4 +1,4 @@
-package com.example.eworkloadapi.exception;
+package com.learncoding.eworkloadapi.exception;
 
 public class ResourceNotFoundException extends Exception {
 

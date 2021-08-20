@@ -1,6 +1,6 @@
-package com.example.eworkloadapi.service;
+package com.learncoding.eworkloadapi.service;
 
-import com.example.eworkloadapi.repository.UserRespository;
+import com.learncoding.eworkloadapi.repository.UserRespository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

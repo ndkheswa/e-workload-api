@@ -1,5 +1,8 @@
-package com.example.eworkloadapi.exception;
+package com.learncoding.eworkloadapi.exception;
 
+import lombok.Getter;
+
+@Getter
 public class ResourceAlreadyExists extends Exception {
 
     public ResourceAlreadyExists() {

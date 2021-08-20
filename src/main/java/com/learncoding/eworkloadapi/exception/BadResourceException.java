@@ -1,4 +1,4 @@
-package com.example.eworkloadapi.exception;
+package com.learncoding.eworkloadapi.exception;
 
 import java.util.ArrayList;
 import java.util.List;

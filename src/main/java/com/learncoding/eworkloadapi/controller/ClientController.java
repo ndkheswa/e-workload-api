@@ -1,10 +1,9 @@
-package com.example.eworkloadapi.controller;
+package com.learncoding.eworkloadapi.controller;
 
-import org.springframework.security.access.prepost.PreAuthorize;
-import com.example.eworkloadapi.exception.BadResourceException;
-import com.example.eworkloadapi.exception.ResourceAlreadyExists;
-import com.example.eworkloadapi.model.Client;
-import com.example.eworkloadapi.service.ClientService;
+import com.learncoding.eworkloadapi.exception.BadResourceException;
+import com.learncoding.eworkloadapi.model.Client;
+import com.learncoding.eworkloadapi.exception.ResourceAlreadyExists;
+import com.learncoding.eworkloadapi.service.ClientService;
 import lombok.extern.log4j.Log4j2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

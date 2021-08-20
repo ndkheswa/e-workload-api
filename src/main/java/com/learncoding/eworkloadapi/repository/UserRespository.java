@@ -1,6 +1,6 @@
-package com.example.eworkloadapi.repository;
+package com.learncoding.eworkloadapi.repository;
 
-import com.example.eworkloadapi.model.User;
+import com.learncoding.eworkloadapi.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
