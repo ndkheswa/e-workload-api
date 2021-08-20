@@ -48,8 +48,7 @@ public class BookingController {
     public ResponseEntity<Booking> save(@PathVariable(name = "clientId") Long clientId,
                                         @RequestBody  Booking booking)  throws ResourceAlreadyExistsException {
         try {
-            bookingService.save(clientId, booking);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(bookingService.save(clientId, booking));
         } catch (ResourceNotFoundException e) {
             logger.error(e.getMessage());
             return ResponseEntity.status(HttpStatus.CONFLICT).build();

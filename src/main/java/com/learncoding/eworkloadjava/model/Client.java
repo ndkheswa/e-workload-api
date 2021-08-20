@@ -1,6 +1,7 @@
 package com.learncoding.eworkloadjava.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -54,6 +55,7 @@ public class Client extends AuditModel implements Serializable {
     @OneToMany(cascade = CascadeType.ALL,
                 fetch = FetchType.LAZY,
                 mappedBy = "client")
+    @JsonIgnore
     private Set<Booking> bookings = new HashSet<>();
 
     public void setAge(Date birthDate) { this.age = calculateAge(birthDate); }

@@ -1,14 +1,11 @@
 package com.learncoding.eworkloadjava.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.sun.istack.NotNull;
-import lombok.Data;
+        import com.fasterxml.jackson.annotation.*;
+        import com.sun.istack.NotNull;
+        import lombok.Data;
 
-import javax.persistence.*;
-import java.util.Date;
+        import javax.persistence.*;
+        import java.util.Date;
 
 @Data
 @Entity
